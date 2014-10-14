@@ -29,7 +29,8 @@
  * @param  selector    selector OR undefined
  * @author Brian Cherne <brian(at)cherne(dot)net>
  */
-(function($) {
+ define('jquery',function($) {
+
     $.fn.hoverIntent = function(handlerIn,handlerOut,selector) {
 
         // default configuration values
@@ -112,4 +113,4 @@
         // listen for mouseenter and mouseleave
         return this.on({'mouseenter.hoverIntent':handleHover,'mouseleave.hoverIntent':handleHover}, cfg.selector);
     };
-})(jQuery);
+});
